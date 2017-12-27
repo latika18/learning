@@ -1,0 +1,6 @@
+# fibonacci series
+A = [0 , 1]
+for i in range (0,6):
+    x = A[i] + A[i + 1]
+    A.append(x)
+print A
