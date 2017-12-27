@@ -1,2 +1,2 @@
 #test code
-Print "Hello"
+print "Hello"
