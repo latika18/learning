@@ -1,0 +1,8 @@
+#anagram
+def random_anagram( string):
+    z= len('string')
+    for i in range(z):
+        print string[z-i:z] +string[:z-i]
+
+
+random_anagram('asdfgh')
