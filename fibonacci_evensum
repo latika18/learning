@@ -1,0 +1,14 @@
+# fibonacci series
+A = [1 , 2]
+for i in range (0,20):
+    x = A[i] + A[i + 1]
+    A.append(x)
+print A
+#sum of even numbers in fibbonacci series
+sum = 0
+j = 0
+while A[j]<=1000:
+    if A[j]% 2 ==0:
+        sum = sum + A[j]
+    j = j +1
+print sum
