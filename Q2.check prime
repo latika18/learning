@@ -1,12 +1,17 @@
 #check prime
 def checkPrime(x):
-    for j in range (2, x//2):
-        if x % j ==0:
-            print x,  " is not a prime number"
-            break
-        elif x % j != 0:
-            print x,  " is a prime number"
-            break
+    flag=0
+    for i in range (2,x-1):
+        if x % i ==0:
+            flag = 1+ flag
+        else:
+            flag = 0 + flag
 
+    if flag == 0:
+        print "prime"
+    else:
+        print"non prime"
+
+        
 x = int(raw_input("enter a number : "))
 checkPrime(x)
