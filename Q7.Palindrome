@@ -1,1 +1,28 @@
-working
+#largest product of two  digit no.s  which is a palindrome eg 91*99 = 9009
+
+def check_palindrome(str):
+    x = len(str)
+    for i in range(x//2):
+        if str[i] == str[x-1-i]:
+            flag = 0
+        else:
+            flag = 1
+    if flag== 0:
+        print "palindrome"
+    else:
+        print " not palindrome"
+                
+check_palindrome('9009')
+
+for i in range (99,90,-1):
+    for j in range (99,90,-1):
+        product = i* j
+        print "product of ", i,"*",j,"=", i*j, "is", check_palindrome('product')
+        
+            
+        
+
+
+
+
+
