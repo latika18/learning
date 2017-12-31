@@ -1,0 +1,25 @@
+def EMI_calculator(P,R , M,d):
+#set rate of interst monthl
+    r=R//12//100
+#chechk if monthly or quaterly installment
+    if M== 'Q' :
+        x=4
+    else:
+        x=1
+#check if duration is in years or month
+    for i in d:
+        if i=='Y':
+            print "duration in years" 
+        d= 12* int(i)
+        print d
+        if i =='M':
+            print "duration in months"
+        d = 1*int (i)
+        print d
+            
+             
+    EMI = x*(P*r*(1+r)**d)//((1+r)**d - 1)
+    return EMI
+
+
+print EMI_calculator(10000,12,'Q','36M')
