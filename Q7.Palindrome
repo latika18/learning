@@ -11,13 +11,16 @@ def check_palindrome(str):
         print "palindrome"
     else:
         print " not palindrome"
+def check_palindrome_easyway(s):
+    s == s[::-1]
+    print "palindrome"
                 
 check_palindrome('9009')
 
 for i in range (99,90,-1):
     for j in range (99,90,-1):
         product = i* j
-        print "product of ", i,"*",j,"=", i*j, "is", check_palindrome('product')
+        print "product of ", i,"*",j,"=", i*j, "is", check_palindrome(str(product))
         
             
         
