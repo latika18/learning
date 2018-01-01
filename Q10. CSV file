@@ -6,14 +6,30 @@
 ##input details
     
 i = 0
-CSV = []
+list =  ['Name' , 'Phone_Number' , 'Email_Address']
+details = [list]
 while i >=0:
     Name = raw_input("Enter your Name: ")
+    if Name == 'exit':
+        break
     Phone_Number = raw_input ("Enter your Phone Number: ")
+    if Phone_Number == 'exit':
+        break
     Email_Address = raw_input ("Enter your email address")
-    details = [Name , Phone_Number , Email_Address]
-    CSV.append(details)
+    if Email_Address == 'exit':
+        break
+    d = [Name , Phone_Number , Email_Address]
+    details.append(d)
     i = i+1
+
+#write this data in format preffered by excel
+import csv
+with open('details.csv ','wb') as f:
+    writer = csv.writer(f)
+    writer.writerows(details)
+with open('details.csv', 'r')as f:
+    for line in f:
+        print line
 
 
 
