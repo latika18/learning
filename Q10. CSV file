@@ -1,1 +1,24 @@
-working
+##Make a data entry shell script. It asks for 3 information, Name, phone number, and email address.
+##It keeps on executing till user enters exit (in any case), or exits forcefully.
+##Write all the data collected into a CSV file. Every combination of Name, phone number,
+##and email address entered go into a single row.
+
+##input details
+    
+i = 0
+CSV = []
+while i >=0:
+    Name = raw_input("Enter your Name: ")
+    Phone_Number = raw_input ("Enter your Phone Number: ")
+    Email_Address = raw_input ("Enter your email address")
+    details = [Name , Phone_Number , Email_Address]
+    CSV.append(details)
+    i = i+1
+
+
+
+
+
+
+
+
