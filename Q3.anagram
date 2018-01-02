@@ -1,8 +1,17 @@
 #anagram
-def random_anagram( string):
-    z= len('string')
-    for i in range(z):
-        print string[z-i:z] +string[:z-i]
+#defining the function anagram
+def anagram(value):
+    import random
+    print len(value)
+    newWord = ''
+    for i in range(len(value)):
+        pos = random.randint(0,len(value)-1)
+        newWord += value[pos]
+        value = value[:pos] + value[pos+1:]
+        
+    print newWord
+anagram('tanush')
+anagram('  ')
 
 
-random_anagram('asdfgh')
+    
