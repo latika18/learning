@@ -1,4 +1,5 @@
-#check prime
+# Question : Create a simple function that checks if a given number is prime number or not.
+
 def checkPrime(x):
     flag=0
     for i in range (2,x-1):
