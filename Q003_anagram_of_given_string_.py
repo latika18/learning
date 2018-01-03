@@ -1,4 +1,4 @@
-#anagram
+# Question : Create a function that given a string, prints a random anagram of it
 #defining the function anagram
 def anagram(value):
     import random
