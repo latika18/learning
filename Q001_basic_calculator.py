@@ -4,15 +4,14 @@
 def calculate(x , y , op):
     if op == '+' :
         z = x  + y
-        return z
     elif op == '-' :
         z = x - y
-        return z
     elif op == '*' :
         z = x * y
-        return z
     elif op == '//' :
+        if y==0:
+            break
         z = x // y
-        return z
+    return z
 
 print calculate(9 , 3 , '//')
