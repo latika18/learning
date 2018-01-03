@@ -9,9 +9,12 @@ def calculate(x , y , op):
     elif op == '*' :
         z = x * y
     elif op == '//' :
-        if y==0:
-            break
-        z = x // y
+        if y!=0:
+            z = x // y
+        else:
+            print "division not possible"
     return z
 
-print calculate(9 , 3 , '//')
+print calculate(9 , 9 , '//')
+print calculate(11 , 0 , '//')
+
