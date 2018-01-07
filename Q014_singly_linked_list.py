@@ -17,3 +17,13 @@ class Node:
 
     def setNext(self,newnext):
         self.next = newnext
+
+
+class UnorderedList:
+
+    def __init__(self):
+        self.head = None
+    def add(self,item):
+        temp = Node(item)
+        temp.setNext(self.head)
+        self.head = temp
