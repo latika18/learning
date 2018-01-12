@@ -12,7 +12,7 @@ def calculate(x , y , op):
         if y!=0:
             z = x // y
         else:
-            print "division not possible"
+           except zero division error
     return z
 
 print calculate(9 , 9 , '//')
