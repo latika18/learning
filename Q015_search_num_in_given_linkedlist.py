@@ -2,7 +2,7 @@
 ##Check if an element is present within a linked list or not.
 ##Assume that your linked list data will be like
 ##>>> 98,52,45,19,37,22,1,66,943,415,21,785,12,698,26,36,18,97,0,63,25,85,24,94,1501
-##Ask for a number and check if it exists within the linked list
+
 
 
 class Node:
