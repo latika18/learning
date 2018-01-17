@@ -14,7 +14,9 @@ def calculate(x , y , op):
         else:
            except zero division error
     return z
-
+print calculate(9 , 9 , '+')
+print calculate(9 , 9 , ' -')
+print calculate(9 , 9 , ' *')
 print calculate(9 , 9 , '//')
 print calculate(11 , 0 , '//')
 
