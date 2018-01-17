@@ -10,7 +10,7 @@ def anagram(value):
         value = value[:pos] + value[pos+1:]
         
     print newWord
-anagram('tanush')
+anagram('tanuush')
 anagram('  ')
 
 
