@@ -7,7 +7,6 @@ def check_palindrome(s):
      if s == s[::-1]:
         return True
 product_pal = []
-factors = []
 for i in range (999,900,-1):
     for j in range (999,900,-1):
         product = i * j
@@ -15,6 +14,5 @@ for i in range (999,900,-1):
             product_pal.append(product)
             print"i =" , i , "j = ",j, "for", product
 print max(product_pal)
-print factors
 
 
