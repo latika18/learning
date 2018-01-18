@@ -28,6 +28,5 @@ def primefactors(x):
         for i in factors:
                 checkPrime(i)
 
-
-        
-primefactors(6000000)
+  
+primefactors(600851475143)
