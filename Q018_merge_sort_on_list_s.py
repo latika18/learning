@@ -4,14 +4,12 @@ def merge_sort(list_sort):
     """splits the list in two parts until each part is left with one member"""
 
     if len(list_sort) ==  1:
-        print len(list_sort)
         return list_sort
    
     if len(list_sort)>= 2:
         x= len(list_sort) / 2
         part_a = list_sort[:x]
         part_b = list_sort[x:]
-        print part_a , part_b
         sorted_part_a = merge_sort(part_a)
         sorted_part_b = merge_sort(part_b)
         return merge(sorted_part_a, sorted_part_b)
@@ -19,30 +17,25 @@ def merge_sort(list_sort):
             
 def merge(left , right):
     """merges the two parts of list after sorting them"""
-    print left, right 
     sorted_list = []
-    i , j = 0
-    if len(left) >= len(right):
-        i = len(left)
-        while i != 0:
-            if left[i] > right[i]:
-                sorted_list.append(right[i])
-            else :
-                sorted_list.append(left[i])
-            i = i-1
-        sorted_list += right[i:]
-    else :
-        i = len(right)
-        while i != 0:
-            if left[i] > right[i]:
-                sorted_list.append(right[i])
-            else :
-                sorted_list.append(left[i])
-            i = i-1
-        sorted_list += left[i:]
+    i = 0
+    while left[:] and right[:] :
+        if  left [i] > right [i]:
+            sorted_list.append(right[i])
+            right.remove(right[i])
+            
+        else :
+            sorted_list.append(left[i])
+            left.remove(left[i])
+            
+    if left[:]:
+            sorted_list.extend(left[:])
+    elif right[:] :
+            sorted_list.extend(right[:])
     return sorted_list
 
-details = [3, 7, 5, 12, 14, 11, 2, 6]
-print merge_sort(details)
+details = [1,127,56,2,1,5,7,9,11,65,12,24,76,87,123,65,8,32,86,123,67,1,67,92,72,39,49,12 ,98,52,45,19,37,22,1,66,943,415,21,785,12,698,26,36,18,97,0,63,25,85,24,94,150]
+print "List to be sorted  = ", details
+print "Sorted List = ", merge_sort(details)
 
 
