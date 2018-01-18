@@ -14,19 +14,21 @@ def checkPrime(x):
             flag = 0 + flag
 
     if flag == 0:
-        print x
-    else:
-        return 0
+        return x
+    
 
 #primefactors
-def primefactors(x):
+def largest_primefactor(x):
         factors = []
+        prime_factors = []
         for i in range (2,x-1):
                 if x%i ==0:
                         factors.append(i)
         print factors
         for i in factors:
-                checkPrime(i)
+                prime_factors.append(checkPrime(i))
+        return max(prime_factors)
 
-  
-primefactors(600851475143)
+
+print largest_primefactor(606061)        
+print largest_primefactor(600851475143)
