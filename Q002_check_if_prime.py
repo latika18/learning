@@ -1,18 +1,13 @@
 # Question : Create a simple function that checks if a given number is prime number or not.
 
+#check prime
 def checkPrime(x):
-    flag=0
-    for i in range (2,x-1):
-        if x % i ==0:
-            flag = 1+ flag
-        else:
-            flag = 0 + flag
-
-    if flag == 0:
-        print "prime"
-    else:
-        print"non prime"
-
+    status = True
+    for i in range (2, int(x**0.5),2):
+        if x % i == 0:
+            status = False
+    return status
+        
         
 x = int(raw_input("enter a number : "))
-checkPrime(x)
+print checkPrime(x)
