@@ -5,17 +5,15 @@
 #Link: https://projecteuler.net/problem=3
                 
 #check prime
+#check prime
 def checkPrime(x):
-    flag=0
-    for i in range (2,x-1):
-        if x % i ==0:
-            flag = 1+ flag
+    for i in range (3, int(x**0.5),2):
+        if x % i == 0:
+            return False
         else:
-            flag = 0 + flag
+            return True
 
-    if flag == 0:
-        return x
-    
+      
 
 #primefactors
 def largest_primefactor(x):
@@ -30,5 +28,5 @@ def largest_primefactor(x):
         return max(prime_factors)
 
 
-print largest_primefactor(606061)        
+print largest_primefactor(6060610)        
 print largest_primefactor(600851475143)
