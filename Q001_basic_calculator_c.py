@@ -12,7 +12,7 @@ def calculate(x , y , op):
         if y!=0:
             z = x // y
         else:
-           except zero division error
+           raise exception
     return z
 print calculate(9 , 9 , '+')
 print calculate(9 , 9 , ' -')
