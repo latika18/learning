@@ -13,6 +13,6 @@ def anagram(value):
     print newWord
 anagram('tanuush')
 anagram('  ')
-
+anagram('aaaaa')
 
     
