@@ -4,6 +4,7 @@
 ##Find the largest palindrome made from the product of two 4-digit numbers.Link: https://projecteuler.net/problem=4
 
 def check_palindrome(s):
+"""function to check whether the srting matches its reverse"""
      if s == s[::-1]:
         return True
 product_pal = []
