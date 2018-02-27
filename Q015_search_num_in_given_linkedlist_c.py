@@ -8,26 +8,38 @@
 class Node:
     
     
-    def __init__(self,item):
-        self.data = item
-        self.next = None
+    def __init__(self, data , next = None):
+        self.data = data
+        self.next = next
 
-    def getData(self):
-        return self.data
-
-    def getNext(self):
-        return self.next
-
-    def setData(self,newdata):
-        self.data = newdata
-
-    def setNext(self, newnext):
-        self.next = newnext
+##    def getData(self):
+##        return self.data
+##
+##    def getNext(self):
+##        return self.next
+##
+##    def setData(self,newdata):
+##        self.data = newdata
+##
+##    def setNext(self, newnext):
+##        self.next = newnext
 
 
 class Linkedlist:
-    def __init__(self):
-        self.head = None
+    def __init__(self,seq = None):
+        self.seq = seq
+        if seq != None:
+            self.extend(seq)
+
+##    def __contains__(self, item):
+##        for i in self:
+##        ...
+
+    def __iter__(self):
+        node = self.head
+        while node:
+            yield node.value
+            node = node.next
 
     def add_member(self,data):
         temp = Node(data)
@@ -44,27 +56,12 @@ class Linkedlist:
         return False
 
 
-temp = Node(34)
-print temp.getData()
+llist = Linkedlist([23, 98, 415, 123, 981, 454, 213, 198])
 
-llist = Linkedlist()
-llist.add_member(23)
-llist.add_member(98)
-llist.add_member(415)
-llist.add_member(123)
-llist.add_member(981)
-llist.add_member(454)
-llist.add_member(213)
-llist.add_member(198)
-llist.add_member(455)
-llist.add_member(253)
-llist.add_member(978)
-llist.add_member(45)
-llist.add_member(203)
-llist.add_member(918)
-llist.add_member(45)
-print llist.search_member(198)
-print llist.search_member(213)
-print llist.search_member(197)
-print llist.search_member(203)
+while True:
+    item = int(raw_input("Enter a number to search for: "))
 
+    if item in llist:
+        print "It's in there!"
+    else:
+        print "Sorry, don't have that one . Check for another number."
