@@ -1,6 +1,5 @@
 #binary search tree from preorder traversal
 # A O(n^2) program for construction of BST from preorder traversal 
- 
 # A binary tree node 
 class Node():
      
