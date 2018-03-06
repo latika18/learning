@@ -7,7 +7,7 @@ def guess_game():
         random_num = randint(0,100)
         print random_num
         guess = int(raw_input(("Enter a number: ")))
-        print guess
+###check if random num is equal to guess       
         if random_num == guess:
             print "your guess is correct"
             break
