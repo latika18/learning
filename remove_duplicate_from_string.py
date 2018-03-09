@@ -31,8 +31,7 @@ def removeDupsSorted(List):
     return string
 
 # Function removes duplicate characters from the string
-# This function work in-place and fills null characters
-# in the extra space left
+# This function work in-place and fills null characters in the extra space left
 def removeDups(string):
     # Convert string to list
     List = toMutable(string)
