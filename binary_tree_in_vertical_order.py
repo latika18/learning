@@ -30,12 +30,12 @@ def getVerticalOrder(root, hd, m):
     # Store nodes in right subtree
     getVerticalOrder(root.right, hd+1, m)
  
-# The main function to print vertical order of a binary
-#tree ith given root
+# The main function to print vertical order of a binary tree ith given root
+
 def printVerticalOrder(root):
      
     # Create a map and store vertical order in map using
-    # function getVerticalORder()
+    # function getVerticalOrder()
     m = dict()
     hd = 0
     getVerticalOrder(root, hd, m)
