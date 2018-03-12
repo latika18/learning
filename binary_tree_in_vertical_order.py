@@ -1,5 +1,4 @@
-# Python program for printing vertical order of a given
-# binary tree
+# Python program for printing vertical order of a given binary tree
  
 # A binary tree node
 class Node:
@@ -36,12 +35,14 @@ def printVerticalOrder(root):
      
     # Create a map and store vertical order in map using
     # function getVerticalOrder()
+
     m = dict()
     hd = 0
     getVerticalOrder(root, hd, m)
      
     # Traverse the map and print nodes at every horizontal
     # distance (hd)
+
     for index, value in enumerate(sorted(m)):
         for i in m[value]:
             print i,
