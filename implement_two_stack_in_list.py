@@ -52,11 +52,11 @@ class twoStacks:
             exit()
  
 # Driver program to test twoStacks class
-ts = twoStacks(5)
-ts.push1(5)
-ts.push2(10)
+ts = twoStacks(15)
+ts.push1(15)
+ts.push2(30)
 ts.push2(15)
-ts.push1(11)
+ts.push1(12)
 ts.push2(7)
  
 print("Popped element from stack1 is " + str(ts.pop1()))
