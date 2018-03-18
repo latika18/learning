@@ -7,7 +7,7 @@ class twoStacks:
         self.top1 = -1
         self.top2 = self.size
          
-    # Method to push an element x to stack1
+    # Method to push an element x to stack_1
     def push1(self, x):
          
         # There is at least one empty space for new element
@@ -19,7 +19,7 @@ class twoStacks:
             print("Stack Overflow ")
             exit(1)
  
-    # Method to push an element x to stack2
+    # Method to push an element x to stack_2
     def push2(self, x):
  
         # There is at least one empty space for new element
@@ -59,7 +59,7 @@ ts.push2(15)
 ts.push1(12)
 ts.push2(7)
  
-print("Popped element from stack1 is " + str(ts.pop1()))
+print("Popped element from stack_1 is " + str(ts.pop1()))
 ts.push2(40)
-print("Popped element from stack2 is " + str(ts.pop2()))
+print("Popped element from stack_2 is " + str(ts.pop2()))
  
