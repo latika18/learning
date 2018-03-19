@@ -11,21 +11,21 @@ def leastFrequent(arr, n) :
     # linear traversal
     min_count = n + 1
     res = -1
-    curr_count = 1
+    current_count = 1
     for i in range(1, n) :
         if (arr[i] == arr[i - 1]) :
-            curr_count = curr_count + 1
+            current_count = current_count + 1
         else :
-            if (curr_count < min_count) :
-                min_count = curr_count
+            if (current_count < min_count) :
+                min_count = current_count
                 res = arr[i - 1]
              
-            curr_count = 1
+            current_count = 1
              
    
     # If last element is least frequent
-    if (curr_count < min_count) :
-        min_count = curr_count
+    if (current_count < min_count) :
+        min_count = current_count
         res = arr[n - 1]
      
     return res
