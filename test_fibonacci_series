@@ -11,3 +11,4 @@ def test_fib(n):
         
     
 test_fib(4)
+test_fib(14)
