@@ -42,7 +42,7 @@ def longestPalSubstr(string):
  
     return maxLength
  
-# Driver program to test above functions
+# Driver program 
 string = "forgeeksskeegfor"
 print "Length is: " + str(longestPalSubstr(string))
  
