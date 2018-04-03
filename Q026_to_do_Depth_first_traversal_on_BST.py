@@ -27,10 +27,26 @@ class BST(object):
                     break
                 else:
                     current = current.right
-    
-       
+                    
+    def inorder(self,root):
+##        import pdb;pdb.set_trace()
+        if root:
+            print root.value
+            if root.left:
+                self.inorder(root.left)
+            if root.right:
+                self.inorder(root.right)
+                
 
- 
+
+    def preorder(self):
+        pass
+
+
+    def postorder(self):
+        pass
+
+
 
 t = BST(22)
 t.insert(30)
@@ -44,5 +60,5 @@ t.insert(6)
 t.insert(40)
 t.insert(60)
 t.insert(3)
-
+t.inorder(t.root)
              
