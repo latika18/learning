@@ -39,12 +39,28 @@ class BST(object):
                 
 
 
-    def preorder(self):
-        pass
+     def preorder(self,root):
+##        root,left,right
+        
+      if root:
+            if root.left:
+                self.preorder(root.left)
+                print root
+            if root.right:
+                self.preorder(root.right)
+     
 
+    def postorder(self,root):
+##      left ,right , root
+##        import pdb;pdb.set_trace()
+            
+        if root.left:
+            self.postorder(root.left)
+        print root.left
+        if root.right:
+            self.postorder(root.right)
+        print root.value
 
-    def postorder(self):
-        pass
 
 
 
@@ -60,5 +76,11 @@ t.insert(6)
 t.insert(40)
 t.insert(60)
 t.insert(3)
+print "preorder"
+t.preorder(t.root)
+print "postorder"
+t.postorder(t.root)
+print "inorder"
 t.inorder(t.root)
+
              
