@@ -29,6 +29,7 @@ class BST(object):
                     current = current.right
                     
     def inorder(self,root):
+        ###left , root , right
 ##        import pdb;pdb.set_trace()
         if root:
             print root.value
