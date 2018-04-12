@@ -16,13 +16,13 @@ class BST(object):
         current = self.root
         while current:
             if value < current.value:
-                if current.left == None:
+                if current.left is None:
                     current.left = Node(value)
                     break
                 else:
                     current = current.left
             else:
-                if current.right == None:
+                if current.right is None:
                     current.right = Node(value)
                     break
                 else:
