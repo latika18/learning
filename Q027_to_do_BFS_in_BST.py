@@ -24,23 +24,24 @@ class BST(object):
                     break
                 else:
                     current = current.left
-     def Breadth_first_search(self,root):
+     def breadth_first_traversal(self, root=None):
         """In BFS the Node Values at each level of the Tree are traversed before going to next level"""
 
-        visited = []
+        to_visit = [root]
         if root:
-            visited.append(root)
+            to_visit.append(root)
             print root.value
         current = root
-        while current :
+        while to_visit:
+            current = to_visit.pop(0)
             if current.left:
                 print current.left.value
-                visited.append(current.left)
+                to_visit.append(current.left)
             if current.right:
                 print current.right.value
-                visited.append(current.right)
-            visited.pop(0)
-            current = visited[0]
+                to_visit.append(current.right)
+          
+            
         
                
   
@@ -56,8 +57,8 @@ t.insert(3)
 t.insert(66)
 t.insert(10)
 
-print "Output of Breadth First search is "
-t.Breadth_first_search(t.root)
+print "Output of Breadth First Traversal is "
+t.breadth_first_traversal(t.root)
 
 
 
