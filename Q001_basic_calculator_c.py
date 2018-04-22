@@ -15,8 +15,8 @@ def calculate(x , y , op):
            raise exception
     return z
 print calculate(9 , 9 , '+')
-print calculate(9 , 9 , ' -')
-print calculate(9 , 9 , ' *')
+print calculate(9 , 9 , '-')
+print calculate(9 , 9 , '*')
 print calculate(9 , 9 , '//')
 print calculate(11 , 0 , '//')
 
