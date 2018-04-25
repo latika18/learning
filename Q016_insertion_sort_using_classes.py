@@ -7,37 +7,23 @@
 ##>>> 98,52,45,19,37,22,1,66,943,415,21,785,12,698,26,36,18,97,0,63,25,85,24,94,1501
 
 
-class Node:
+def insert_sort(a):
+    if len(a)== 0:
+        print "Please give valid input"
+    for i in range(1, len(a)):
+        current = 0
+        while current < i:
+            if a[i] < a[current]:
+                a[current], a[i]= a[i] , a[current]
+                
+            current = current + 1
+    return a
+  
+print insert_sort([12,54,66,43,11,33,34,33,1,45])
 
-    def __init__(self,data,next = None):
-        self.data =data
-        self.next = None
 
-class LinkedList:
-    def __init__(self, seq=None):
-        self.head = Node(None)
-        if seq is not None:
-            self.head.data = seq
-            
-    def __iter__(self):
-        node = self.head
-        while node:
-            yield node.data
-            node = node.next
-            
-temp = Node(67)
-print temp.data
 
-llist = LinkedList([23])s
-while True:
-    item = int(raw_input("Enter a number to search for: "))
 
-    if item in llist:
-        print "It's in there!"
-    else:
-        print "Sorry, don't have that one."
-
- 
 
 
 
