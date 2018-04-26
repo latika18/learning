@@ -7,19 +7,27 @@
 ##>>> 98,52,45,19,37,22,1,66,943,415,21,785,12,698,26,36,18,97,0,63,25,85,24,94,1501
 
 
-def insert_sort(a):
-    if len(a)== 0:
-        print "Please give valid input"
-    for i in range(1, len(a)):
-        current = 0
-        while current < i:
-            if a[i] < a[current]:
-                a[current], a[i]= a[i] , a[current]
-                
-            current = current + 1
-    return a
+def insert_sort(alist):
+    """ Fuction to sort a given list a """
+    
+    for i in range(0, len(alist)-1):
+        current = i+1
+        while current :
+            ###if the current number is lesser than the number on left than swap values
+            if alist[current] < alist[i]:
+                alist[current], alist[i] = alist[i], alist[current]
+                print alist
+            current = current - 1 
+            i = i - 1
+               
+    return alist
   
-print insert_sort([12,54,66,43,11,33,34,33,1,45])
+print insert_sort([11,126,54,2,1,65,24,77,93,31,44,55,20])
+
+
+
+
+
 
 
 
