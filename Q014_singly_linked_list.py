@@ -3,59 +3,76 @@
 ##Assume that your data will be like
 ##>>> 98,52,45,19,37,22,1,66,943,415,21,785,12,698,26,36,18,97,0,63,25,85,24,94,1501
 
-class Node:
+class Node(object):
 
-    def __init__(self,initdata):
-        self.data = initdata
-        self.next = None
+    def __init__(self,data=None, next=None):
+        self.data = data
+        self.next = next
 
-    def getData(self):
-        return self.data
+class LinkedList(object):
 
-    def getNext(self):
-        return self.next
+    def __init__(self, seq=None):
+        self.head = Node()
+        if seq is not None:
+            self.extend(seq)
+      
 
-    def setData(self,newdata):
-        self.data = newdata
+    def extend(self, seq):
+        node = self.head
+        for i in range(0, len(seq)):
+            node = Node(seq[i])
+            print node.data
+            node = node.next
 
-    def setNext(self,newnext):
-        self.next = newnext
-
-
-class UnorderedList:
-
-
-    def __init__(self):
-        self.head = None
-
-    def add(self,item):
-        temp = Node(item)
-        temp.setNext(self.head)
-        self.head = temp
-
-    def printList(self):
-        current = self.head
-        count = 0
-        while current != None:
-            print current.getData()
-            current = current.getNext()
-            count = count +1
+    def append(self, a):
+        node = self.head
+        while node:
+            print node.data
+            node = node.next
+            if node == None:
+                node.next = Node(a)
 
 
-temp = Node(67)
-print temp.getData()
-my_list = UnorderedList()
-my_list.add(93)
-my_list.add(60)
-my_list.add(34)
-my_list.add(9)
-my_list.add(5)
-my_list.add(193)
-my_list.add(30)
-my_list.add(54)
-my_list.add(707)
-my_list.add(930)
-my_list.add(600)
-my_list.add(1034)
-my_list.add(19)
-my_list.printList()
+    def __iter__(self):
+        node = self.head
+        while node:
+            yield node.data
+            node = node.next
+
+    def __contains__(self, item):
+        
+        for node in self:
+            return item 
+     
+    
+    def __repr__(self):
+        return  str(self.data) 
+
+
+    def remove(self, item):
+        node = self.head
+        for node in self:
+            if node== item:
+                node= node.next
+            
+        
+                
+            
+
+if __name__ == "__main__":
+
+    llist = LinkedList([98,52,45,19,37,22,1,66,943,415,21,785,12,698,26,36,18,97,0,63,25,85,24])
+    llist.extend([204,98,78])
+    llist.append([222])
+    
+    while True:
+        item = int(raw_input("Enter a number to search for: "))
+
+        if item in llist:
+            print "It's in there!"
+        else:
+            print "Sorry, don't have that one"
+
+    
+   
+
