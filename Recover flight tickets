@@ -1,0 +1,8 @@
+
+11
+down vote
+favorite
+2
+I just found a whole bunch of plane tickets that only have a start and destination on them. I also know the route started in a certain city. I would like to recover the (alphabetically) first possible route a person took using these tickets. I added some examples in the doctests.
+
+from collections import OrderedDict, defaultdict
