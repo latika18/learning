@@ -49,4 +49,4 @@ nSolutions = 0
 board = [[False] * 8 for i in range(8)]
 place_queens(board)
 print("Found %s solutions!" % nSolutions)
-python
+
