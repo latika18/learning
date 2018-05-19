@@ -19,6 +19,14 @@ Traceback (most recent call last):
     x = int(raw_input("enter a number"))
 ValueError: invalid literal for int() with base 10: 'd'
 
+>>> 2 + '7'
+
+Traceback (most recent call last):
+  File "<pyshell#11>", line 1, in <module>
+    2 + '7'
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+>>> 
+
 
 
 
