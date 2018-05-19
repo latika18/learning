@@ -5,3 +5,9 @@ Traceback (most recent call last):
   File "<pyshell#1>", line 1, in <module>
     print a[5]
 IndexError: list index out of range
+>>> print b
+
+Traceback (most recent call last):
+  File "<pyshell#2>", line 1, in <module>
+    print b
+NameError: name 'b' is not defined
