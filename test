@@ -11,6 +11,14 @@ Traceback (most recent call last):
   File "<pyshell#2>", line 1, in <module>
     print b
 NameError: name 'b' is not defined
+>>> x = int(raw_input("enter a number:  "))
+enter a number:   d
+
+Traceback (most recent call last):
+  File "<pyshell#8>", line 1, in <module>
+    x = int(raw_input("enter a number"))
+ValueError: invalid literal for int() with base 10: 'd'
+
 
 
 
