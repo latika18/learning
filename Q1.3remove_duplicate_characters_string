@@ -5,13 +5,16 @@ Write the test cases for this method.
 
 def remove_dup(word):
     for i, c in enumerate(word):
-        word1 = word[:i+1]
-        word2 = word[i+1:]
-        if c in word2:
-            word2.remove(c)
-        word =word1+word2
+        if c in word[i+1:]:
+            word1=word[:i+1]
+            word2= word[i+1:]
+            word = word1 +  word2.replace(c," ")
+    return word.replace(" ","")
 
-    return word
+print remove_dup('llllllllllllllllaaatttttttttttttikaaaaaaaaa')
+print remove_dup('llllllllllllllll')
+print remove_dup('llllllllllllllllaaaaaaaaaaaa')
+print remove_dup('general')
 
-print remove_dup('latika')
         
+
