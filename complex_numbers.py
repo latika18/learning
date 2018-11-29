@@ -17,3 +17,15 @@ print (z.real)
  
 print ("The imaginary part of complex number is : ",end="")
 print (z.imag)
+......................
+class complexnumbers(object);
+    def __init__(self, real,img);
+         self.real = real
+         self.img= img
+   
+   def number(self);
+       self.real + (self.img)j
+    
+    
+    
+   
