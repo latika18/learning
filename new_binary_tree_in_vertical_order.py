@@ -17,16 +17,16 @@ def getVerticalOrder(root, hd, m):
     if root is None:
         return
      
-    # Store current node in map 'm'
+    # This will Store current node in map 'm'
     try:
         m[hd].append(root.key)
     except:
         m[hd] = [root.key]
      
-    # Store nodes in left subtree
+    # This will Store nodes in left subtree
     getVerticalOrder(root.left, hd-1, m)
      
-    # Store nodes in right subtree
+    # This will Store nodes in right subtree
     getVerticalOrder(root.right, hd+1, m)
  
 # The main function to print vertical order of a binary tree ith given root
