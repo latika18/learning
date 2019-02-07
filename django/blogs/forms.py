@@ -1,5 +1,5 @@
 from django import forms
-from .models import Post, Comments
+from .models import Post, Comment
 
 class PostForm(forms.ModelForm):
 	class Meta():
@@ -17,5 +17,5 @@ class CommentForm(forms.ModelForm):
 
 		widgets = {
 			'author':forms.TextInput(attrs={'class':'textinputclass'}),
-			'text' : forms.Textarea(attrs={'class':'editable medium-editor-textarea'})
+			'text' : forms.Textarea(attrs={'class':'editable medium-editor-textarea'}) #from medium editor
 		}
