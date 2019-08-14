@@ -16,7 +16,7 @@ def is_anagram(wd1,wd2):
         return False
 
 
-print is_anagram('xxxx','xxx')
+print is_anagram('xxrrrxx','xxx')
     
 
 

@@ -1,0 +1,11 @@
+
+<?php
+echo "hello";
+$family = array("Aman","Latika","kanishka","Tanush");
+ 
+foreach($family as $key => $value) {
+ echo "Array item ".$key." is ". $value."<br>";
+
+}
+
+?>
